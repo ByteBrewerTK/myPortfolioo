@@ -50,7 +50,8 @@ html{
     flex-direction: column;
     align-items: center;
     position: relative;
-
+    border: 1px solid white;
+    
 
     .nav-bar{
         width: 80%;
@@ -59,6 +60,16 @@ html{
         justify-content: space-between;
         align-items: baseline;
         margin-top: 2rem;
+        position: relative;
+        // position: sticky;
+        // input{
+        //     visibility: hidden;
+        //     position: absolute;
+        //     position: inherit;
+        //     // float: right;
+        // }
+       
+        
         p{
             font-size: 2rem;
             font-weight: 700;
@@ -73,7 +84,7 @@ html{
             gap: 5rem;
 
             li{
-                // background-color: $btn-color;
+                
                 // width: fit-content;
                 position: relative;
                 width: fit-content;
@@ -81,19 +92,21 @@ html{
                 &::before{
                     content: "";
                     width:100%;
-                    height: .3rem;
+                    height: .2rem;
                     background-color: $btn-color;
                     bottom: -.6rem;
                     border-radius: 2rem;
                     position: absolute;
-                    transform: scale(0);
+                    transform: scaleX(0);
                     transition: 0.4s;
-                    &:hover{
-                        transform: scale(1);
-                       
-    
-                    }
+                    opacity: 0;
                     
+                }
+                &:hover::before{
+                    transform: scaleX(1);
+                    opacity: 1;
+                   
+
                 }
                 
 
@@ -104,8 +117,7 @@ html{
                     color: white;
                     font-size: 1.1rem;
                    
-
-
+                    
                 }
             }
         }
@@ -115,10 +127,18 @@ html{
             text-align: center;
             padding: 1.1rem 0rem 1.1em 0;
             // padding: 1.2rem;
-            border-radius: 2rem;
+            border-radius: 1rem;
             font-weight: bold;
             
         }
+        
+        // .check-btn{
+        //     font-size: 2rem;
+        //     color: white;
+        //     float: right;
+        //     position: absolute;
+           
+        //    }
     }
 
     .sec-hero{
@@ -170,6 +190,10 @@ html{
                     border: none;
                     user-select: none;
                 }
+                input::placeholder{
+                    font-size: .9rem;
+
+                }
 
                 a{
                     background-color: $btn-color;
@@ -212,6 +236,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid white;
     
     // border: 1px solid white;
     .content-about-page{
@@ -320,6 +345,7 @@ html{
     // border: 1px solid white;
     @include flex-center;
     flex-direction: column;
+    border: 1px solid white;
 
    .content-project-box{
     width: 80%;
@@ -362,7 +388,7 @@ html{
                 height: 0;
                 background: linear-gradient(rgba(0,0,0,0.1), #ff004f);
                 position: absolute;
-                border-radius: 8px;
+                border-radius: .5rem;
                 left: 0;
                 bottom: 0;
                 overflow: hidden;
@@ -371,13 +397,13 @@ html{
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                padding: 0 40px;
+                padding: 0 2.5rem;
                 transition: height 0.5s;
 
                 h5{
-                    font-size: 20px;
+                    font-size: 1.25;
                     font-weight: 600;
-                    margin-bottom: 15px;
+                    margin-bottom: .9375rem;
                    
                 }
                 p{
@@ -391,11 +417,11 @@ html{
                     text-decoration: none;
                     i{
                         color: $btn-color;
-                        margin-top: 20px;
-                        font-size: 20px;
+                        margin-top: 1.25rem;
+                        font-size: 1.25rem;
                         background: $text-color;
-                        width: 60px;
-                        height: 60px;
+                        width:3.75rem;
+                        height: 3.75rem;
                         display: flex;
                         @include flex-center;
                         border-radius: 50%;
@@ -431,6 +457,7 @@ html{
     background-color: black;
     // overflow: hidden;
     @include flex-center;
+    border: 1px solid white;
 
     .container-service{
         width: 80%;
@@ -440,7 +467,8 @@ html{
         justify-content: flex-end;
         flex-direction: column;
         line-height: 3rem;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        overflow-wrap: normal;
 
         h2{
             font-size: 3rem;
@@ -520,7 +548,7 @@ html{
     width: 100vw;
     height: 100vh;
     background-color: black;
-    // border: 1px solid white;
+    border: 1px solid white;
     overflow: hidden;
     @include flex-center;
 
@@ -531,11 +559,7 @@ html{
         display: grid;
         grid-template-columns: repeat(2,1fr);
 
-        .cnt-grid{
-            // border: 1px solid white;
-
-
-        }
+        
 
         .contact-left{
             
@@ -657,6 +681,7 @@ html{
                     background-color: $btn-color;
                     color: white;
                     font-weight: bold;
+                    border: none;
 
                     &:active{
                         transform: scale(.97);
@@ -717,9 +742,102 @@ html{
     }
     
 }
-@media(max-width:661px) {
-    html{
-        font-size: 50%;
+@media screen and (max-width:600px){
+    .content{
+        height: 129vh;
+        width: 130vw;
+        
     }
+    .content .nav-bar p {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    //   .content .nav-bar p b {
+    //     color: #f9004d;
+    //   }
+      .content .nav-bar ul {
+        display: flex;
+        list-style: none;
+        align-items: baseline;
+        gap: 1rem;
+      }
+      
+    .content .sec-hero .left-content {
+        width: 100%;
+        line-height: 5rem;
+      }
+      .content .sec-hero .left-content h2 {
+        font-size: 4rem;
+      }
+      .content .sec-hero .left-content .email-input {
+        background: white;
+        display: inline-block;
+        width: 60%;
+        height: 2.5rem;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .about-page{
+        width: 130vw;
+        height: 129vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    .about-page .content-about-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-page .content-about-page .left-part {
+        border-radius: 2rem;
+        width: 80%;
+        height: 100%;
+      }
+      .project-page {
+        height: 129vh;
+        width: 130vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid white;
+        // overflow: scroll;
+      }
+      .service-page {
+        height: 129vh;
+        width: 130vw;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+      }
+
+      .contact-wrapper {
+        height: 129vh;
+        width: 130vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .contact-wrapper .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10rem;
+      }
+      .contact-wrapper .contact-container .contact-right form button {
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        padding: 0 0.6rem;
+      }
+
     
 }

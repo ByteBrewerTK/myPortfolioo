@@ -42,6 +42,7 @@ html {
   flex-direction: column;
   align-items: center;
   position: relative;
+  border: 1px solid white;
 }
 .content .nav-bar {
   width: 80%;
@@ -50,6 +51,7 @@ html {
   justify-content: space-between;
   align-items: baseline;
   margin-top: 2rem;
+  position: relative;
 }
 .content .nav-bar p {
   font-size: 2rem;
@@ -73,16 +75,18 @@ html {
 .content .nav-bar ul li::before {
   content: "";
   width: 100%;
-  height: 0.3rem;
+  height: 0.2rem;
   background-color: #f9004d;
   bottom: -0.6rem;
   border-radius: 2rem;
   position: absolute;
-  transform: scale(0);
+  transform: scaleX(0);
   transition: 0.4s;
+  opacity: 0;
 }
-.content .nav-bar ul li::before:hover {
-  transform: scale(1);
+.content .nav-bar ul li:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
 }
 .content .nav-bar ul li a {
   text-decoration: none;
@@ -94,7 +98,7 @@ html {
   width: 8rem;
   text-align: center;
   padding: 1.1rem 0rem 1.1em 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   font-weight: bold;
 }
 .content .sec-hero {
@@ -142,6 +146,15 @@ html {
       -ms-user-select: none;
           user-select: none;
 }
+.content .sec-hero .left-content .email-input input::-moz-placeholder {
+  font-size: 0.9rem;
+}
+.content .sec-hero .left-content .email-input input:-ms-input-placeholder {
+  font-size: 0.9rem;
+}
+.content .sec-hero .left-content .email-input input::placeholder {
+  font-size: 0.9rem;
+}
 .content .sec-hero .left-content .email-input a {
   background-color: #f9004d;
   height: 100%;
@@ -175,6 +188,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
 }
 .about-page .content-about-page {
   width: 80%;
@@ -253,6 +267,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 1px solid white;
 }
 .project-page .content-project-box {
   width: 80%;
@@ -292,7 +307,7 @@ html {
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.1), #ff004f);
   position: absolute;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   left: 0;
   bottom: 0;
   overflow: hidden;
@@ -301,13 +316,13 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 2.5rem;
   transition: height 0.5s;
 }
 .project-page .content-project-box .content-project-page .grid .layer h5 {
-  font-size: 20px;
+  font-size: 1.25;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 .project-page .content-project-box .content-project-page .grid .layer p {
   color: rgb(213, 211, 211);
@@ -319,11 +334,11 @@ html {
 }
 .project-page .content-project-box .content-project-page .grid .layer a i {
   color: #f9004d;
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
   background: rgb(213, 211, 211);
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   display: flex;
   display: flex;
   justify-content: center;
@@ -347,6 +362,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
 }
 .service-page .container-service {
   width: 80%;
@@ -356,7 +372,7 @@ html {
   justify-content: flex-end;
   flex-direction: column;
   line-height: 3rem;
-  flex-wrap: wrap;
+  overflow-wrap: normal;
 }
 .service-page .container-service h2 {
   font-size: 3rem;
@@ -424,6 +440,7 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: black;
+  border: 1px solid white;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -541,6 +558,7 @@ html {
   background-color: #f9004d;
   color: white;
   font-weight: bold;
+  border: none;
 }
 .contact-wrapper .contact-container .contact-right form button:active {
   transform: scale(0.97);
@@ -591,8 +609,92 @@ html {
     font-size: 60%;
   }
 }
-@media (max-width: 661px) {
-  html {
-    font-size: 50%;
+@media screen and (max-width: 600px) {
+  .content {
+    height: 129vh;
+    width: 130vw;
+  }
+  .content .nav-bar p {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .content .nav-bar ul {
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  .content .sec-hero .left-content {
+    width: 100%;
+    line-height: 5rem;
+  }
+  .content .sec-hero .left-content h2 {
+    font-size: 4rem;
+  }
+  .content .sec-hero .left-content .email-input {
+    background: white;
+    display: inline-block;
+    width: 60%;
+    height: 2.5rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+  }
+  .about-page {
+    width: 130vw;
+    height: 129vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  .about-page .content-about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-page .content-about-page .left-part {
+    border-radius: 2rem;
+    width: 80%;
+    height: 100%;
+  }
+  .project-page {
+    height: 129vh;
+    width: 130vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+  }
+  .service-page {
+    height: 129vh;
+    width: 130vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+  }
+  .contact-wrapper {
+    height: 129vh;
+    width: 130vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-wrapper .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
+  }
+  .contact-wrapper .contact-container .contact-right form button {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    padding: 0 0.6rem;
   }
 }/*# sourceMappingURL=main.css.map */
