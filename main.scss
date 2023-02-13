@@ -50,7 +50,7 @@ html{
     flex-direction: column;
     align-items: center;
     position: relative;
-    border: 1px solid white;
+    // border: 1px solid white;
     
 
     .nav-bar{
@@ -236,7 +236,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    // border: 1px solid white;
     
     // border: 1px solid white;
     .content-about-page{
@@ -345,7 +345,7 @@ html{
     // border: 1px solid white;
     @include flex-center;
     flex-direction: column;
-    border: 1px solid white;
+    // border: 1px solid white;
 
    .content-project-box{
     width: 80%;
@@ -457,7 +457,7 @@ html{
     background-color: black;
     // overflow: hidden;
     @include flex-center;
-    border: 1px solid white;
+    // border: 1px solid white;
 
     .container-service{
         width: 80%;
@@ -548,7 +548,7 @@ html{
     width: 100vw;
     height: 100vh;
     background-color: black;
-    border: 1px solid white;
+    // border: 1px solid white;
     overflow: hidden;
     @include flex-center;
 
