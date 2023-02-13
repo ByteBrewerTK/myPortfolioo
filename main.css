@@ -164,6 +164,9 @@ html {
   background-color: #dd064a;
   transform: scale(1.02);
 }
+.content .sec-hero .left-content .email-input:active a {
+  transform: scale(0.96);
+}
 
 .about-page {
   width: 100vw;
@@ -277,6 +280,7 @@ html {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .project-page .content-project-box .content-project-page .grid img {
   width: 100%;
@@ -332,6 +336,9 @@ html {
 }
 .project-page .content-project-box .content-project-page .grid:hover .layer {
   height: 100%;
+}
+.project-page .content-project-box .content-project-page .grid:active {
+  transform: scale(0.96);
 }
 
 .service-page {
@@ -411,4 +418,130 @@ html {
   background-color: rgb(213, 211, 211);
   color: rgb(62, 62, 62);
   transform: scale(1.02);
+}
+
+.contact-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-wrapper .contact-container {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.contact-wrapper .contact-container .contact-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.contact-wrapper .contact-container .contact-left h5 {
+  font-size: 1.1rem;
+}
+.contact-wrapper .contact-container .contact-left h2 {
+  color: white;
+  font-size: 4rem;
+}
+.contact-wrapper .contact-container .contact-left h2 b {
+  color: #f9004d;
+}
+.contact-wrapper .contact-container .contact-left ul {
+  list-style: none;
+}
+.contact-wrapper .contact-container .contact-left ul li {
+  line-height: 2;
+}
+.contact-wrapper .contact-container .contact-left ul li a {
+  text-decoration: none;
+  color: rgb(213, 211, 211);
+  padding-left: 0.9rem;
+}
+.contact-wrapper .contact-container .contact-left .social-icons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.contact-wrapper .contact-container .contact-left .social-icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+  background-color: #f9004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-wrapper .contact-container .contact-left .social-icons a:hover .icons {
+  transform: scale(1.2);
+}
+.contact-wrapper .contact-container .contact-left .social-icons a:active {
+  transform: scale(0.9);
+}
+.contact-wrapper .contact-container .contact-left .social-icons a .icons {
+  color: rgb(213, 211, 211);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+.contact-wrapper .contact-container .contact-right {
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem;
+}
+.contact-wrapper .contact-container .contact-right form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1.1rem;
+  flex-direction: column;
+}
+.contact-wrapper .contact-container .contact-right form .inp-size {
+  height: 3rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: rgb(41, 41, 41);
+  border-radius: 0.3rem;
+  padding-left: 0.9rem;
+  color: white;
+}
+.contact-wrapper .contact-container .contact-right form .inp-size:active {
+  transform: scale(1.006);
+}
+.contact-wrapper .contact-container .contact-right form textarea {
+  width: 100%;
+  height: 20rem;
+  outline: none;
+  border: none;
+  background-color: rgb(41, 41, 41);
+  border-radius: 0.3rem;
+  padding: 0.9rem;
+  color: white;
+  resize: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+}
+.contact-wrapper .contact-container .contact-right form textarea:active {
+  transform: scale(1.006);
+}
+.contact-wrapper .contact-container .contact-right form button {
+  width: 8rem;
+  height: 2.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 0 0.6rem;
+  background-color: #f9004d;
+  color: white;
+  font-weight: bold;
+}
+.contact-wrapper .contact-container .contact-right form button:active {
+  transform: scale(0.97);
 }/*# sourceMappingURL=main.css.map */

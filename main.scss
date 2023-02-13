@@ -92,6 +92,7 @@ html{
                        
     
                     }
+                    
                 }
                 
 
@@ -191,6 +192,9 @@ html{
                         transform: scale(1.02);
                     }
 
+                }
+                &:active a{
+                    transform: scale(0.96);
                 }
             }
 
@@ -333,14 +337,6 @@ html{
         }
     }
     .content-project-page{
-        // border: 1px solid white;
-        // width: 100%;
-        // height: 100%;
-        // padding: 4rem;
-        // display: grid;
-        // grid-template-columns: repeat(3,1fr);
-        // grid-template-rows: repeat(2,1fr);
-        // gap: 4rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, auto));
         align-items: center;
@@ -352,6 +348,7 @@ html{
             overflow: hidden;
             border-radius: 8px;
             cursor: pointer;
+            transition: 0.3s;
             img{
                 width: 100%;
                 height: 100%;
@@ -413,6 +410,9 @@ html{
             }
             &:hover .layer{
                 height: 100%;
+            }
+            &:active{
+                transform: scale(.96);
             }
         }
 
@@ -500,6 +500,163 @@ html{
                         background-color: $text-color;
                         color: rgb(62, 62, 62);
                         transform: scale(1.02);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+// ===============
+//    Contact Me
+// ===============
+
+.contact-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    // border: 1px solid white;
+    overflow: hidden;
+    @include flex-center;
+
+    .contact-container{
+        width: 80%;
+        height: 80%;
+        // border: 1px solid white;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        .cnt-grid{
+            // border: 1px solid white;
+
+
+        }
+
+        .contact-left{
+            
+            @include flex-center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 1.2rem;
+            
+            
+            h5{
+                font-size: 1.1rem;
+            }
+            h2{
+                color: white;
+                font-size: 4rem;
+
+                b{
+                    color: $btn-color;
+                }
+
+            }
+            ul{
+                list-style: none;
+                li{
+                    line-height: 2;
+
+                    a{
+                        text-decoration: none;
+                        color: $text-color;
+                        padding-left: .9rem;
+
+                    }
+                    
+                }
+            }
+            .social-icons{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                a{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: .4rem;
+                    background-color: $btn-color;
+                    @include flex-center;
+                    &:hover .icons{
+                        transform: scale(1.2);
+                    }
+                    &:active{
+                        transform: scale(0.9);
+                    }
+
+                    
+                   
+                .icons{
+                    color: $text-color;
+                    font-size: 1.3rem;
+                    transition: 0.3s;
+
+                    
+                }
+                }
+            
+            }
+
+        }
+
+        .contact-right{
+            width: 100%;
+            height: 100%;
+            padding-top: 3rem;
+            // overflow: hidden;
+            form{
+                // border: 1px solid white;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                gap: 1.1rem;
+                flex-direction: column;
+                .inp-size{
+                    height: 3rem;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background-color: rgb(41, 41, 41);
+                    border-radius: .3rem;
+                    padding-left: .9rem;
+                    color: white;
+                    &:active{
+                        transform: scale(1.006);
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    height: 20rem;
+                    outline: none;
+                    border: none;
+                    background-color: rgb(41, 41, 41);
+                    border-radius: .3rem;
+                    padding: .9rem;
+                    color: white;
+                    resize: none;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 1.1rem;
+                    &:active{
+                        transform: scale(1.006);
+                    }
+                }
+
+                button{
+                    width: 8rem;
+                    height: 2.6rem;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                    padding: 0 .6rem;
+                    background-color: $btn-color;
+                    color: white;
+                    font-weight: bold;
+
+                    &:active{
+                        transform: scale(.97);
                     }
                 }
 
