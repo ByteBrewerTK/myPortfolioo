@@ -105,11 +105,14 @@ html {
   position: absolute;
 }
 .content .nav-bar .check-btn {
-  font-size: 3rem;
   color: white;
   float: right;
   position: absolute;
   visibility: hidden;
+}
+.content .nav-bar .check-btn i {
+  font-size: 5rem;
+  margin: 0;
 }
 .content .sec-hero {
   width: 80%;
@@ -646,6 +649,9 @@ html {
   }
   .content .nav-bar {
     flex-direction: row-reverse;
+  }
+  .content .nav-bar p {
+    font-size: 3rem;
   }
   .content .nav-bar .btn-submit {
     display: none;
