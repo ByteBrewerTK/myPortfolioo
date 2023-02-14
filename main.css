@@ -46,6 +46,7 @@ html {
 .content .nav-bar {
   width: 80%;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   justify-content: space-between;
   align-items: baseline;
@@ -99,6 +100,15 @@ html {
   padding: 1.1rem 0rem 1.1em 0;
   border-radius: 1rem;
   font-weight: bold;
+}
+.content .nav-bar input {
+  visibility: hidden;
+}
+.content .nav-bar .check-btn {
+  font-size: 3rem;
+  color: white;
+  float: right;
+  position: absolute;
 }
 .content .sec-hero {
   width: 80%;
@@ -607,20 +617,55 @@ html {
 @media screen and (max-width: 600px) {
   html {
     overflow-x: hidden;
+    background-color: black;
+  }
+  .bg-img-wrapper {
+    width: 130vw;
+    height: 129vh;
+  }
+  .bg-img-wrapper .bg-image {
+    background-image: none;
   }
   .content {
-    height: 100vh;
+    height: 120vh;
     width: 130vw;
+  }
+  .content .nav-bar .btn-submit {
+    display: none;
+  }
+  .content .nav-bar ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 50%;
+    border: 1px solid rgb(213, 211, 211);
+    background-color: black;
+    top: 5rem;
+    padding: 0;
+    right: 0;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .nav-bar ul li {
+    padding: 0;
+    background-color: rgb(50, 49, 49);
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkBox:not(:checked) ~ ul {
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: 0.5s;
   }
   .content .nav-bar p {
     font-size: 4rem;
     font-weight: 700;
-  }
-  .content .nav-bar ul {
-    display: flex;
-    list-style: none;
-    align-items: baseline;
-    gap: 1rem;
   }
   .content .sec-hero .left-content {
     width: 100%;
@@ -630,12 +675,12 @@ html {
     font-size: 3rem;
   }
   .content .sec-hero .left-content h2 {
-    font-size: 10rem;
+    font-size: 8rem;
     line-height: 1;
   }
   .content .sec-hero .left-content .email-input {
     display: inline-block;
-    width: 80%;
+    width: 70%;
     height: 5rem;
     display: flex;
     overflow: hidden;
@@ -680,7 +725,11 @@ html {
     height: 100%;
   }
   .about-page .content-about-page .right-page {
-    margin: 0 auto;
+    margin-top: 8rem;
+    padding: 0;
+  }
+  .about-page .content-about-page .right-page p {
+    font-size: 1.7rem;
   }
   .about-page .content-about-page .right-page h2 b {
     color: #f9004d;
@@ -744,5 +793,14 @@ html {
     height: 4rem;
     font-size: 1.2rem;
     padding: 0 0.6rem;
+  }
+  .content .nav-bar .check-btn {
+    font-size: 3rem;
+    color: white;
+    float: right;
+  }
+  .checkBox:checked ~ ul {
+    transform: scaleY(1);
+    transform-origin: top;
   }
 }/*# sourceMappingURL=main.css.map */

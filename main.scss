@@ -56,19 +56,12 @@ html{
     .nav-bar{
         width: 80%;
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
         justify-content: space-between;
         align-items: baseline;
         margin-top: 2rem;
         position: relative;
-        // position: sticky;
-        // input{
-        //     visibility: hidden;
-        //     position: absolute;
-        //     position: inherit;
-        //     // float: right;
-        // }
-       
         
         p{
             font-size: 2rem;
@@ -131,14 +124,17 @@ html{
             font-weight: bold;
             
         }
+        input{
+            visibility: hidden;
+        }
         
-        // .check-btn{
-        //     font-size: 2rem;
-        //     color: white;
-        //     float: right;
-        //     position: absolute;
-           
-        //    }
+        .check-btn{
+            font-size: 3rem;
+            color: white;
+            float: right;
+            position: absolute;
+
+           }
     }
 
     .sec-hero{
@@ -745,38 +741,63 @@ html{
 @media screen and (max-width:600px){
     html{
         overflow-x: hidden;
+        background-color: black;
     }
-    // .bg-img-wrapper{
-    //     width: 130vw;
-    //     height: 129vh;
-    //     .bg-image {
-    //         width: 100%;
-    //         height: 100%;
-    //         z-index: 1;
-    //         background-image: linear-gradient(rgba(0, 0, 0, 0.045), rgba(0, 0, 0, 0.767)), url(./images/_DSC0059-01-removebg-preview-02.jpeg);
-    //         background-repeat: no-repeat;
-    //         background-size:contain;
-    //         background-position: center;
-    //         position:absolute;
-    //     }
-    // }
+    .bg-img-wrapper{
+        width: 130vw;
+        height: 129vh;
+        .bg-image {
+            background-image:none;
+        }
+    }
     .content{
-        height: 100vh;
+        height: 120vh;
         width: 130vw;
         
     }
+    .content .nav-bar .btn-submit {
+       display: none;
+    }
+    .content .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 50%;
+        border: 1px solid $text-color;
+        // height: 23rem;
+        background-color: black;
+        top: 5rem;
+        padding: 0;
+        right: 0;
+        gap: .2rem;
+        justify-content: center;
+        align-items: center;
+        // transform: scaleY(0);
+        //  border: 1px solid gray;
+        li{
+            padding: 0;
+            // border: 1px solid gray;
+            background-color: rgb(50, 49, 49);
+            text-align: center;
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      }
+      .checkBox:not(:checked)~ul{
+        
+        transform: scaleY(0);
+        // width: 0;
+        // height: 50%;
+        opacity: 0;
+        transform-origin: top;
+        transition: 0.5s;
+      }
     .content .nav-bar p {
         font-size: 4rem;
         font-weight: 700;
-      }
-    //   .content .nav-bar p b {
-    //     color: #f9004d;
-    //   }
-      .content .nav-bar ul {
-        display: flex;
-        list-style: none;
-        align-items: baseline;
-        gap: 1rem;
       }
       
     .content .sec-hero .left-content {
@@ -787,12 +808,12 @@ html{
         font-size: 3rem;
       }
       .content .sec-hero .left-content h2 {
-        font-size: 10rem;
+        font-size: 8rem;
         line-height: 1;
       }
       .content .sec-hero .left-content .email-input {
         display: inline-block;
-        width: 80%;
+        width: 70%;
         height: 5rem;
         display: flex;
         overflow: hidden;
@@ -833,7 +854,12 @@ html{
         height: 100%;
       }
       .about-page .content-about-page .right-page {
-        margin: 0 auto;
+        // margin:  auto;
+        margin-top: 8rem;
+        padding: 0;
+        p{
+            font-size: 1.7rem;
+        }
         h2 b{
             color: $btn-color;
         }
@@ -853,10 +879,6 @@ html{
         width: 130vw;    
         padding: 4rem 0;    
     }
-    // .service-card .card{
-    //     width: 100%;
-    //     height: 5rem;
-    // }
     .service-page .container-service .service-card .card h4 {
         font-size: 2rem;
       }
@@ -913,5 +935,15 @@ html{
         padding: 0 0.6rem;
       }
 
-    
+    .content .nav-bar .check-btn {
+        font-size: 3rem;
+        color: white;
+        float: right;
+        // height: 100%;
+    }
+    .checkBox:checked~ul{
+        transform: scaleY(1);
+        transform-origin: top;
+        
+    }
 }
