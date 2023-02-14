@@ -743,13 +743,16 @@ html{
     
 }
 @media screen and (max-width:600px){
+    html{
+        overflow-x: hidden;
+    }
     .content{
         height: 129vh;
         width: 130vw;
         
     }
     .content .nav-bar p {
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 700;
       }
     //   .content .nav-bar p b {
@@ -764,20 +767,40 @@ html{
       
     .content .sec-hero .left-content {
         width: 100%;
-        line-height: 5rem;
+        line-height: 9rem;
+      }
+      .content .sec-hero .left-content p {
+        font-size: 3rem;
       }
       .content .sec-hero .left-content h2 {
-        font-size: 4rem;
+        font-size: 10rem;
+        line-height: 1;
       }
       .content .sec-hero .left-content .email-input {
-        background: white;
         display: inline-block;
-        width: 60%;
-        height: 2.5rem;
+        width: 80%;
+        height: 5rem;
         display: flex;
         overflow: hidden;
         align-items: center;
+        padding-left: 1.2rem;
+
     }
+    .content .sec-hero .left-content .email-input input {
+        width: 100%;
+        height: 100%;
+    }
+    .content .sec-hero .left-content .email-input input::placeholder {
+        font-size: 1.6rem;
+      }
+      .content .sec-hero .left-content .email-input a {
+        width: 15rem;
+        font-size: 1.5rem;
+        transition: 0.2s;
+        i{
+            font-size: 1.8rem;
+        }
+      }
 
     .about-page{
         width: 130vw;
@@ -792,6 +815,7 @@ html{
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-shrink: 1;
     }
     .about-page .content-about-page .left-part {
         border-radius: 2rem;
@@ -799,22 +823,46 @@ html{
         height: 100%;
       }
       .project-page {
-        height: 129vh;
+        height: auto;
         width: 130vw;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        flex-wrap:wrap;
+        overflow: auto;
         flex-direction: column;
-        border: 1px solid white;
-        // overflow: scroll;
+        flex-shrink: 2;
       }
-      .service-page {
-        height: 129vh;
-        width: 130vw;
+
+      .project-page .content-project-box .content-project-page {
         display: flex;
         flex-direction: column;
-        border: 1px solid white;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        margin-top: 5rem;
+      }
+
+      .service-page {
+        height: auto;
+        width: 130vw;        
+    }
+    .service-card .card{
+        width: 100%;
+        height: 5rem;
+    }
+
+      .service-page .container-service {
+
+        .service-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            
+            .card{
+                width: 100%;
+            }
+        }
+
+        
       }
 
       .contact-wrapper {
