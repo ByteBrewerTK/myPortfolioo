@@ -56,7 +56,7 @@ html{
     .nav-bar{
         width: 80%;
         display: flex;
-        flex-direction: row-reverse;
+        // flex-direction: ro;
         justify-content: center;
         justify-content: space-between;
         align-items: baseline;
@@ -126,13 +126,19 @@ html{
         }
         input{
             visibility: hidden;
+            position: absolute;
         }
+        // .check-btn{
+        //     display: none;
+
+        // }
         
         .check-btn{
             font-size: 3rem;
             color: white;
             float: right;
             position: absolute;
+            visibility: hidden;
 
            }
     }
@@ -706,6 +712,12 @@ html{
     }
     
 }
+@media(max-width:1033px) {
+    html{
+        font-size: 70%;
+    }
+    
+}
 @media(min-width:1364){
     html{
         font-size: 66%;
@@ -738,6 +750,12 @@ html{
     }
     
 }
+@media(max-width:692px) {
+    html{
+        font-size: 50%;
+    }
+    
+}
 @media screen and (max-width:600px){
     html{
         overflow-x: hidden;
@@ -750,10 +768,17 @@ html{
             background-image:none;
         }
     }
+    .check-btn{
+        display:contents;
+    }
     .content{
         height: 120vh;
         width: 130vw;
         
+        
+    }
+    .content .nav-bar{
+        flex-direction: row-reverse;
     }
     .content .nav-bar .btn-submit {
        display: none;
@@ -940,6 +965,8 @@ html{
         color: white;
         float: right;
         // height: 100%;
+        // display:inline;
+        visibility: visible;
     }
     .checkBox:checked~ul{
         transform: scaleY(1);
