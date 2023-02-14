@@ -746,8 +746,22 @@ html{
     html{
         overflow-x: hidden;
     }
+    // .bg-img-wrapper{
+    //     width: 130vw;
+    //     height: 129vh;
+    //     .bg-image {
+    //         width: 100%;
+    //         height: 100%;
+    //         z-index: 1;
+    //         background-image: linear-gradient(rgba(0, 0, 0, 0.045), rgba(0, 0, 0, 0.767)), url(./images/_DSC0059-01-removebg-preview-02.jpeg);
+    //         background-repeat: no-repeat;
+    //         background-size:contain;
+    //         background-position: center;
+    //         position:absolute;
+    //     }
+    // }
     .content{
-        height: 129vh;
+        height: 100vh;
         width: 130vw;
         
     }
@@ -807,9 +821,6 @@ html{
         height: 129vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
     }
     .about-page .content-about-page{
         display: flex;
@@ -819,8 +830,13 @@ html{
     }
     .about-page .content-about-page .left-part {
         border-radius: 2rem;
-        width: 80%;
         height: 100%;
+      }
+      .about-page .content-about-page .right-page {
+        margin: 0 auto;
+        h2 b{
+            color: $btn-color;
+        }
       }
       .project-page {
         height: auto;
@@ -832,21 +848,30 @@ html{
         flex-shrink: 2;
       }
 
-      .project-page .content-project-box .content-project-page {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-        margin-top: 5rem;
-      }
-
       .service-page {
         height: auto;
-        width: 130vw;        
+        width: 130vw;    
+        padding: 4rem 0;    
     }
-    .service-card .card{
-        width: 100%;
-        height: 5rem;
+    // .service-card .card{
+    //     width: 100%;
+    //     height: 5rem;
+    // }
+    .service-page .container-service .service-card .card h4 {
+        font-size: 2rem;
+      }
+    .service-page .container-service .service-card .card i {
+        font-size: 2.5rem;
+      }
+    .service-page .container-service .service-card .card p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .service-page .container-service .service-card .card a {
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.3rem;
+
     }
 
       .service-page .container-service {
@@ -866,10 +891,11 @@ html{
       }
 
       .contact-wrapper {
-        height: 129vh;
+        height: auto;
         width: 130vw;
         overflow: hidden;
         display: flex;
+        padding: 5rem 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
