@@ -55,6 +55,10 @@ html {
 .content .nav-bar p {
   font-size: 2rem;
   font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .content .nav-bar p b {
   color: #f9004d;
@@ -680,6 +684,9 @@ html {
     justify-content: center;
     align-items: center;
   }
+  .content .nav-bar ul li a {
+    font-size: 2rem;
+  }
   .checkBox:not(:checked) ~ ul {
     transform: scaleY(0);
     opacity: 0;
@@ -826,5 +833,29 @@ html {
   .checkBox:checked ~ ul {
     transform: scaleY(1);
     transform-origin: top;
+  }
+  .contact-wrapper .contact-container .contact-left h5 {
+    font-size: 1.5rem;
+  }
+  .contact-wrapper .contact-container .contact-left p {
+    font-size: 1.5rem;
+  }
+  .contact-wrapper .contact-container .contact-left a {
+    font-size: 1.5rem;
+  }
+  .contact-wrapper .contact-container .contact-left .social-icons a {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+    background-color: #f9004d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-wrapper .contact-container .contact-left .social-icons a .icons {
+    font-size: 3rem;
+  }
+  .contact-wrapper .contact-container .contact-left ul li i {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

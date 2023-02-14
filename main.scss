@@ -67,6 +67,7 @@ html{
         p{
             font-size: 2rem;
             font-weight: 700;
+            user-select: none;
             b{
                 color: $btn-color;
             }
@@ -799,6 +800,7 @@ html{
         flex-direction: column;
         position: absolute;
         width: 50%;
+        // height: 100%;
         border: 1px solid $text-color;
         // height: 23rem;
         background-color: black;
@@ -820,6 +822,10 @@ html{
             display: flex;
             justify-content: center;
             align-items: center;
+            // font-size: 2rem;
+            a{
+                font-size: 2rem;
+            }
         }
       }
       .checkBox:not(:checked)~ul{
@@ -984,4 +990,31 @@ html{
         transform-origin: top;
         
     }
+    .contact-wrapper .contact-container .contact-left {
+        h5{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        a{
+            font-size: 1.5rem;
+            
+        }
+        .social-icons a {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 0.4rem;
+            background-color: #f9004d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icons{
+                font-size: 3rem;
+            }
+        }
+    }
+    .contact-wrapper .contact-container .contact-left ul li i{
+        font-size: 1.5rem;
+      }
 }
